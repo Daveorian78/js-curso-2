@@ -8,13 +8,27 @@
 </head>
 <body>
     <header>
-        <h1></h1>
+        let titulo = document.querySelector('h1');
+        titulo.innerHTML = 'Hora del desafio';
     </header>
     <main class="container">
-        <button onclick="" class="button">Console</button>
-        <button onclick="" class="button">Alert</button>
+        <button onclick="mostrarMensajeEnLaConsola()" class="button">Console</button>
+        function mostrarMensajeEnLaConsola() {
+        console.log('El botón fue cliclado!')
+        }
+        <button onclick="mostrarAlerta()" class="button">Alert</button>
+        function mostrarAlerta () {
+        alert("AMO JS");
+        }
         <button onclick="" class="button">Prompt</button>
-        <button onclick="" class="button">Suma</button>
+        <button onclick="sumaDosNumeros()" class="button">Suma</button>
+        function sumaDosNumeros() {
+        let primerNumero = parseInt(prompt('Digite el primer numero'));
+        let segunNumero = parseInt(prompt('Digite el segundo numero'));
+        let resultado = primerNumero + segunNumero;
+        alert('${primerNumero}+${segunNumero} = ${resultado}')
+        }
+        
     </main>
 
       <script src="app.js"></script>
